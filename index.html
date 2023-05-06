@@ -16,45 +16,40 @@
             <form>
                 <div>
                     <label for="capital">CAPITAL
-                        <input type="text" placeholder="Ingrese el capital prestado" id="capital">
+                        <input type="text" class="form.control" id="capital" placeholder="Ingrese el capital prestado">
                     </label>
                 </div>
                 <div>
                     <label for="couta">CUOTAS
-                        <input type="text" placeholder="Ingrese las cuotas del prestamo" id="couta">
+                        <input type="number" class="form-control" id="cuotas" placeholder="Ingrese las cuotas del prestamo">
                     </label>
                 </div>
                 <div>
                     <label for="interes">INTERES
-                        <input type="text" placeholder="Ingrese el interés a generar" id="interes">
+                        <input type="text" class="form-control" id="interes" placeholder="Ingrese el interés a generar">
                     </label>
                 </div>
+                <div class="form-group mt-2 mb-3 alert alert-danger" hidden id="alert-error">
+                    Debes llenar todos los campos!
+                </div>
             </form>
-            <button onclick="gen_table();">CALCULAR</button>
-        </fieldset>
+            <button type="button" class="btn btn-primary" id="btnCalcular">CALCULAR</button>
         <hr>
-        <table class="tab">
+        <table id="lista-tabla" class="table">
             <thead>
                 <tr>
-                    <td>NRO</td>
-                    <td>CAPITAL</td>
-                    <td>INTERES</td>
-                    <td>IMPORTE A PAGAR</td>
+                    <th>FECHA</th>
+                    <th>CAPITAL</th>
+                    <th>INTERES</th>
+                    <th>IMPORTE A PAGAR</th>
+                    <th>TOTAL</th>
                 </tr>
             </thead>
-            <tbody id="tab">
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td class="ft">TOTAL</td>
-                    <td id="t1"></td>
-                    <td id="t2"></td>
-                    <td id="t3"></td>
-                </tr>
-            </tfoot>
-        </table>
+            <tbody></tbody>
+            </table>
     </div>
-    <script src="indexjs4.js"></script>
+    <script src="prueba.js"></script>
+    <script src="dayjs/dayjs.min.js"></script>
 </body>
 
 </html>
